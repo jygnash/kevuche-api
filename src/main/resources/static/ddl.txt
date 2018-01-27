@@ -1,0 +1,21 @@
+-- Table: public.app_user
+
+DROP TABLE public.app_user;
+
+CREATE TABLE public.app_user
+(
+  user_id character varying(100) NOT NULL,
+  password character varying(100) NOT NULL,
+  first_name varchar(100) NOT NULL,
+  last_name varchar(100) NOT NULL,
+  middle_name varchar(2),
+  email varchar(250),
+  phone varchar(10),
+  create_ts timestamp,
+  CONSTRAINT "AppUser_pkey" PRIMARY KEY (user_id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.app_user
+  OWNER TO postgres;
